@@ -14,16 +14,19 @@ int main(){
 	}
 	cout<<endl;
     int j=0,sum=0,i=0,st=0,en=0;
+    //increase end pointer with one by one 
     while(j<n && sum+a[j]<=s){
         sum=sum+a[j];
         j++;
     }
+
     if(sum==s){
         cout<<i+1<<j;
 		return 0;
     }
 	while(j<n){
 		sum+=a[j];
+		//start start  pointer with one by one and decrease  value to equal sum
 		while(sum>s){
 			sum-=a[i];
 			i++;
